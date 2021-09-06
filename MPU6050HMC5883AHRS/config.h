@@ -1,6 +1,12 @@
 #ifndef _CONFIG_H
 #define _CONFIG_H
 
+typedef enum MOT_TYPE{
+  EM_DC_BRUSH,
+  EM_SERVO,
+  EM_MOT_TYPE_MAX  
+}MOT_TYPE;
+
 typedef enum AXIS_OF_ROT{
   EM_THROT = 0,
   EM_ROLL,
@@ -31,11 +37,14 @@ typedef enum MOT_CHANNEL{
 /////////////////////User Configer
 #define SELECTED_FRAME EM_PLANE
 
+int Ch_Pin[EM_MOT_CH_MAX] ={ 2,3,4,5,6,7,8,9 };
+
 /////////////////////Default Mixer
 
 /////////////////////Dont Change
 #define NUM_AXIS 3
 
 #define NUM_MOT_CHANNELS EM_MOT_CH_MAX
+
 
 #endif
